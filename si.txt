@@ -1,0 +1,84 @@
+    <!-- NAV 1-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="Logotipo Prevengos alargado (negativo).png"
+            alt=""
+            width="210"
+            height="70"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item my-2">
+              <a class="nav-link active" href="textoFotos.html">Empresa</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="textoFotos.html">Software</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="areas.html">Áreas de gestión</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="funcionalidades.html"
+                >Funcionalidades</a
+              >
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="arquitectura.html">Arquitectura</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="clientes.html">Clientes</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown my-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Soporte
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://soporte.prevengos.com/"
+                    target="_blank"
+                    >Área privada</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ayuda.prevengos.com/"
+                    target="_blank"
+                    >Ayuda online</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Webinars</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
