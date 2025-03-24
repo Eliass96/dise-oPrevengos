@@ -10,10 +10,15 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.title_service {
+  color: var(--heading-color);
 }
 
 /* Botón elegante */
@@ -41,15 +46,15 @@
 
 /* Sombra debajo del navbar */
 .shadow-nav {
-  position: fixed;  /* Lo fija en la parte superior */
+  position: fixed; /* Lo fija en la parte superior */
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;  /* Asegura que ocupe todo el ancho */
-  z-index: 9999;  /* Lo mantiene por encima de otros elementos */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Sombra sutil debajo */
-  background-color: #fff;  /* Fondo blanco para el header */
-  padding: 10px 0;  /* Espaciado superior e inferior */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  z-index: 9999; /* Lo mantiene por encima de otros elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil debajo */
+  background-color: #fff; /* Fondo blanco para el header */
+  padding: 10px 0; /* Espaciado superior e inferior */
   min-height: 15vh;
   height: auto;
   max-height: 15vh;
@@ -67,11 +72,6 @@ main {
   background: #fff; /* Fondo blanco */
 }
 
-/* Estilos generales */
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 /* Contenedor */
 .fancy-header {
   display: flex;
@@ -87,7 +87,7 @@ body {
   letter-spacing: 2px;
   position: relative;
   display: inline-block;
-  color: #2c3e50;
+  color: var(--nav-color);
   padding-bottom: 10px;
 }
 
@@ -122,7 +122,7 @@ body {
 
 .card img {
   object-fit: contain; /* Ajusta la imagen sin distorsionarla */
-  max-width: 50px;  /* Tamaño máximo en ancho */
+  max-width: 50px; /* Tamaño máximo en ancho */
   max-height: 50px; /* Tamaño máximo en altura */
   width: 100%; /* Hace que la imagen ocupe el 100% del contenedor si es necesario */
   height: auto; /* Mantiene la proporción de la imagen */
@@ -158,7 +158,6 @@ body {
     text-align: center;
   }
 }
-
 
 .intro {
   margin-inline: 8vw !important;
@@ -205,20 +204,20 @@ body {
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2487ce; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #326699; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0d8eca; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #124265; /* The default color of the main navmenu links */
-  --nav-hover-color: #2487ce; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #2c3e50; /* The default color of the main navmenu links */
+  --nav-hover-color: #0d8eca; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #124265; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #2487ce; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #326699; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -229,7 +228,7 @@ body {
 }
 
 .dark-background {
-  --background-color: #202020;
+  --background-color: RGB(25, 25, 25, 0.95);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -237,7 +236,7 @@ body {
 }
 
 .accent-background {
-  --background-color: #2487ce;
+  --background-color: #0d8eca;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
@@ -484,7 +483,9 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
+/*--------------------------------------------------------------
+# Navigation Menu - Desktop
+--------------------------------------------------------------*/
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -502,38 +503,53 @@ h6 {
     position: relative;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
+  .navmenu a {
     color: var(--nav-color);
-    padding: 18px 15px;
+    margin-inline: 15px;
+    margin-top: 18px;
+    padding-bottom: 10px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    white-space: nowrap;
     transition: 0.3s;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
+  .navmenu .bi {
+    margin-inline-start: 5px;
   }
 
-  .navmenu li:last-child a {
-    padding-right: 0;
+  /* Animación de subrayado */
+  .navmenu a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--nav-hover-color);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navmenu a:hover::after {
+    width: 100%;
+    transform: scaleX(1);
   }
 
   .navmenu li:hover > a,
-  .navmenu .active,
-  .navmenu .active:focus {
+  .navmenu .active {
     color: var(--nav-hover-color);
   }
 
+  /* Estilos del dropdown */
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -541,34 +557,16 @@ h6 {
     display: block;
     position: absolute;
     visibility: hidden;
-    right: 0;
+    left: 0;
     top: 130%;
     opacity: 0;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover > a {
-    color: var(--nav-dropdown-hover-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: max-content; /* Hace que el ancho se ajuste al contenido más ancho */
+    min-width: 150px; /* Para que tenga un mínimo y no se vea demasiado pequeño */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
   }
 
   .navmenu .dropdown:hover > ul {
@@ -577,34 +575,75 @@ h6 {
     visibility: visible;
   }
 
+  .navmenu .dropdown ul li {
+    width: 100%;
+  }
+
+  .navmenu .dropdown ul a {
+    color: var(--nav-color);
+    margin-inline: 15px;
+    margin-top: 18px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease-in-out;
+    position: relative; /* 🔹 Necesario para el subrayado */
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  /* Subrayado animado SOLO del ancho del texto */
+  .navmenu .dropdown ul a::after {
+    content: "";
+    width: 100%;
+    height: 2px; /* Puedes ajustar el grosor del subrayado */
+    background: var(--nav-hover-color); /* 🔹 Color del subrayado */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0); /* 🔹 Inicialmente invisible */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Mostrar el subrayado al pasar el cursor */
+  .navmenu .dropdown ul a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .navmenu .dropdown ul a:hover {
+    background: var(--nav-dropdown-hover-background);
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  /* Submenús dentro de dropdown */
   .navmenu .dropdown .dropdown ul {
+    left: 100%;
     top: 0;
-    right: -90%;
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
   }
 
   .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
-    top: 0;
-    right: -100%;
     visibility: visible;
   }
 }
 
-/* Navmenu - Mobile */
+/*--------------------------------------------------------------
+# Navigation Menu - Mobile
+--------------------------------------------------------------*/
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
-  }
-
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
   }
 
   .navmenu ul {
@@ -619,95 +658,60 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .navmenu a,
-  .navmenu a:focus {
+  .navmenu a {
     color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
+    padding: 12px 20px;
     font-size: 17px;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    white-space: nowrap;
     transition: 0.3s;
+    text-decoration: none;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  /* Subrayado animado SOLO del ancho del texto */
+  .navmenu a::after {
+    content: "";
+    width: 0; /* Inicialmente sin ancho */
+    height: 2px;
+    background: var(--nav-hover-color);
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   }
 
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+  /* Mostrar el subrayado al pasar el cursor */
+  .navmenu a:hover::after {
+    width: 100%; /* Solo del tamaño del texto */
+    transform: translateX(-50%) scaleX(1);
   }
 
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
+  .navmenu a:hover::after {
+    transform: scaleX(1);
   }
 
   .navmenu .dropdown ul {
     position: static;
     display: none;
-    z-index: 99;
     padding: 10px 0;
-    margin: 10px 20px;
+    margin: 0 20px;
     background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
   }
 
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown > .dropdown-active {
+  .navmenu .dropdown .dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
-    overflow: hidden;
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
