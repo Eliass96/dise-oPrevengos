@@ -24,7 +24,7 @@
 /* Botón elegante */
 .btn-custom {
   display: inline-block;
-  background: #326699; /* Color del botón */
+  background: var(--nav-color); /* Color del botón */
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -52,7 +52,7 @@
   right: 0;
   width: 100%; /* Asegura que ocupe todo el ancho */
   z-index: 9999; /* Lo mantiene por encima de otros elementos */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil debajo */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); /* Sombra sutil debajo */
   background-color: #fff; /* Fondo blanco para el header */
   padding: 10px 0; /* Espaciado superior e inferior */
   min-height: 15vh;
@@ -79,10 +79,15 @@ main {
   align-items: center;
 }
 
+.slider {
+  margin-top: 160px;
+  margin-bottom: 50px;
+}
+
 /* Título llamativo */
 .fancy-title {
-  font-size: 42px;
-  font-weight: bold;
+  font-size: 30px !important;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -91,11 +96,20 @@ main {
   padding-bottom: 10px;
 }
 
+.fancy-title a {
+  font-size: 30px !important;
+  color: var(--nav-color);
+}
+
+.fancy-title a:hover {
+  color: var(--nav-color);
+}
+
 /* Subrayado animado SOLO del ancho del texto */
 .fancy-title::after {
   content: "";
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: #326699; /* Color de subrayado */
   position: absolute;
   left: 0;
@@ -761,6 +775,110 @@ h6 {
   display: block;
 }
 
+/************************************************************************************************************/
+.sliderFull {
+  margin-top: 110px;
+  width: 100%;
+  padding: 0;
+  margin-inline: 0;
+}
+
+.sliderFull .carousel {
+  padding: 0;
+}
+
+.sliderFull .carousel-inner {
+  position: relative; /* Asegura que los botones se posicionen dentro de este contenedor */
+}
+
+.sliderFull .carousel-item img {
+  display: block; /* Elimina el espacio extra debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  max-height: 85vh; /* Mantiene la proporción de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(40%);
+}
+
+.sliderFull .text-container {
+  position: absolute;
+  bottom: 70px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  left: 18%;
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sliderFull .button-container {
+  position: absolute;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  text-align: center;
+}
+
+.sliderFull .btn-custom {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid white !important;
+  color: white; /* Color de fondo ligeramente transparente */
+  border: none;
+  border-radius: 6px;
+}
+
+.sliderFull .btn-custom:hover {
+  background-color: white; /* Color más oscuro al pasar el ratón */
+  color: black;
+}
+
+.sliderFull .carousel-control-prev,
+.sliderFull .carousel-control-next {
+  position: absolute;
+  top: 50%; /* Coloca los botones verticalmente al centro */
+  transform: translateY(-50%); /* Centra los botones de forma precisa */
+  z-index: 5; /* Los botones deben estar encima de la imagen */
+  border: none; /* Elimina bordes */
+  padding: 10px; /* Espaciado dentro de los botones */
+}
+
+.sliderFull .carousel-control-prev {
+  left: 0; /* Coloca el botón "prev" dentro de la imagen en el lado izquierdo */
+}
+
+.sliderFull .carousel-control-next {
+  right: 0; /* Coloca el botón "next" dentro de la imagen en el lado derecho */
+}
+
+.sliderFull .title-container {
+  position: absolute;
+  bottom: 350px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  font-size: 3em;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.sliderFull .text-container {
+  position: absolute;
+  bottom: 300px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/********************************************************************************************/
+
 .carousel-inner {
   position: relative; /* Asegura que los botones se posicionen dentro de este contenedor */
 }
@@ -769,6 +887,32 @@ h6 {
   display: block; /* Elimina el espacio extra debajo de la imagen */
   margin: 0 auto; /* Centra la imagen horizontalmente */
   width: 70%; /* Ajusta el tamaño de la imagen */
+  max-height: 550px; /* Mantiene la proporción de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(50%);
+}
+
+.title-container {
+  position: absolute;
+  bottom: 250px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  font-size: 2em;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 200px; /* Ajusta la distancia desde la parte inferior de la imagen */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
@@ -780,18 +924,21 @@ h6 {
   text-align: center;
 }
 
-.btn {
+ .btn-custom {
   padding: 10px 20px;
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: rgba(
-    0,
-    123,
-    255,
-    0.8
-  ); /* Color de fondo ligeramente transparente */
+  background-color: black;
+  border: 1px solid white !important;
+  color: white; /* Color de fondo ligeramente transparente */
   border: none;
+  border-radius: 6px;
+}
+
+.btn-custom:hover {
+  background-color: white; /* Color más oscuro al pasar el ratón */
+  color: black;
 }
 
 .carousel-control-prev,
@@ -1291,19 +1438,6 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 72px;
-}
-
-.hero p {
-  margin: 10px 0 0 0;
-  font-size: 22px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 @media (max-width: 992px) {
