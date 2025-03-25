@@ -91,7 +91,7 @@ main {
 }
 
 .slider {
-  margin-top: 160px;
+  margin-top: 60px;
   margin-bottom: 50px;
 }
 
@@ -1149,7 +1149,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #0E0E0E;
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
   font-size: 14px;
   position: relative;
@@ -1157,6 +1157,15 @@ h6 {
 
 .footer .footer-top {
   padding-top: 50px;
+}
+
+
+
+.footer .footer-contact {
+  background-image: url("https://img.goodfon.com/wallpaper/big/0/22/karta-mira-chernyi-fon-zemlia.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .footer .footer-about .logo {
