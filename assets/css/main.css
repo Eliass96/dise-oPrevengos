@@ -82,7 +82,7 @@
 }
 
 main {
-  margin-top: 13vh;
+  margin-top: 13vh !important;
 }
 
 /* Sombra superior del footer */
@@ -697,6 +697,15 @@ h6 {
   width: 100%;
   padding: 0;
   margin-inline: 0;
+}
+
+.sliderFull .btn-custom {
+  background-color: transparent !important;
+}
+
+.sliderFull .btn-custom:hover {
+  background-color: white !important;
+  border: 1px solid black !important;
 }
 
 .sliderFull .carousel {
@@ -1602,6 +1611,18 @@ section,
   filter: none;
   opacity: 1;
   transform: scale(1.1);
+}
+
+.clients .btn-custom {
+  background-color: transparent !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.clients .btn-custom:hover {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid white !important;
 }
 
 @media (max-width: 640px) {
@@ -2565,14 +2586,13 @@ section,
 .funcionalidad {
   display: flex;
   flex-wrap: wrap; /* Asegura que los items se acomoden en varias filas si es necesario */
-  gap: 10px; /* Espaciado entre los elementos */
 }
 
 .funcionalidad .funcionalidad-item {
   background: var(--bs-light);
   border-radius: 10px;
   transition: 0.5s;
-  width: 200px !important;
+  
   display: flex;
   flex-direction: column; /* Asegura que el contenido del item esté en una columna */
   justify-content: space-between; /* Acomoda el contenido para que se distribuyan de manera uniforme */
