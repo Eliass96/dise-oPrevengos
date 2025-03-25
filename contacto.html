@@ -23,46 +23,87 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <div
-      class="container-fluid d-flex align-items-center navbar-light bg-light w-100 m-0 px-5 py-3 shadow-nav"
-    >
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="Logotipo Prevengos alargado.png" alt="" />
-      </a>
+    <nav class="navbar navbar-expand-xl navbar-light w-100 m-0 px-2 shadow-nav">
+      <div class="container-fluid d-flex align-items-center">
+        <a
+          class="header navbar-brand d-flex align-items-center me-auto"
+          href="index.html"
+        >
+          <img src="Logotipo Prevengos alargado.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </button>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li class="dropdown">
-            <a href="#" class="fancy-menu"
-              ><span>SOFTWARE</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
-            <ul>
-              <li><a href="areas.html">Áreas de gestión</a></li>
-              <li><a href="funcionalidades.html">Funcionalidades</a></li>
-              <li><a href="arquitectura.html">Arquitectura</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="servicios.html" class="fancy-menu">SERVICIOS</a>
-          </li>
-          <li><a href="textoFotos.html" class="fancy-menu">NOSOTROS</a></li>
-          <li><a href="clientes.html" class="fancy-menu">CLIENTES</a></li>
-          <li><a href="contacto.html" class="fancy-menu">CONTACTO</a></li>
-          <li>
-            <button class="btn_header">
-              <a href="https://soporte.prevengos.com/" target="_blank"
-                >ÁREA PRIVADA</a
+        <div class="collapse navbar-collapse p-3" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link fancy-menu desplegable"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-            </button>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
+                SOFTWARE <i class="fa-solid fa-caret-down dropdown-icon"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="areas.html"
+                    >Áreas de gestión</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="funcionalidades.html"
+                    >Funcionalidades</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="arquitectura.html"
+                    >Arquitectura</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fancy-menu" href="servicios.html">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fancy-menu" href="textoFotos.html">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fancy-menu" href="clientes.html">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fancy-menu" href="contacto.html">CONTACTO</a>
+            </li>
+            <li>
+              <button class="btn_header">
+                <a href="https://soporte.prevengos.com/" target="_blank"
+                  >ÁREA PRIVADA</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
       <!-- Page Title -->
       <div class="fancy-header container-fluid">

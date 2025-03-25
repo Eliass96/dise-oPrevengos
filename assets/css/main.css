@@ -48,7 +48,7 @@
 
 .header img {
   height: 8vh !important;
-}  
+}
 
 @media screen and (max-width: 1290px) {
   .header img {
@@ -173,6 +173,8 @@ main {
   padding-inline: 10px !important;
   min-width: max-content !important; /* Hace que el ancho se ajuste al contenido más ancho */
   max-width: max-content !important; /* Hace que el ancho se ajuste al contenido más ancho */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 5px;
 }
 
 /* Opcional: para agregar un efecto de transición */
@@ -486,7 +488,7 @@ h6 {
   }
 
   .desplegable {
-  margin-right: 8px !important;
+    margin-right: 8px !important;
   }
 
   .dropdown-icon {
@@ -497,7 +499,9 @@ h6 {
   .desplegable:hover .dropdown-icon,
   .desplegable:active .dropdown-icon {
     transform: rotate(180deg) !important;
-    -webkit-transform: rotate(180deg) !important; /* Para navegadores antiguos */
+    -webkit-transform: rotate(
+      180deg
+    ) !important; /* Para navegadores antiguos */
   }
 
   .desplegable .dropdown-icon {
@@ -534,8 +538,11 @@ h6 {
 
   .dropdown-item {
     padding-inline: 0 !important;
-    margin-inline: 0 !important;
+    margin-inline: 15px !important;
+    margin-top: 5px !important;
     width: fit-content !important;
+    color: var(--nav-color);
+    font-family: var(--nav-font);
   }
 
   /* Estilos del dropdown */
@@ -641,78 +648,8 @@ h6 {
     margin-left: 0;
   }
 
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
-
-  .navmenu a {
-    color: var(--nav-dropdown-color);
-    padding: 12px 20px;
-    font-size: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 0.3s;
-    text-decoration: none;
-  }
-
-  /* Subrayado animado SOLO del ancho del texto */
-  .navmenu a::after {
-    content: "";
-    width: 0; /* Inicialmente sin ancho */
-    height: 2px;
-    background: var(--nav-hover-color);
-    position: absolute;
-    left: 50%;
-    bottom: 5px;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
-  }
-
-  /* Mostrar el subrayado al pasar el cursor */
-  .navmenu a:hover::after {
-    width: 100%; /* Solo del tamaño del texto */
-    transform: translateX(-50%) scaleX(1);
-  }
-
-  .navmenu a:hover::after {
-    transform: scaleX(1);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    padding: 10px 0;
-    margin: 0 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border-radius: 6px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .navmenu .dropdown .dropdown-active {
-    display: block;
-  }
-
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu > ul {
-    display: block;
+  .dropdown-menu {
+    box-shadow: none !important;
   }
 }
 
@@ -2622,3 +2559,50 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+/* FUNCIONALIDADES */
+/*** Service Start ***/
+.funcionalidad {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los items se acomoden en varias filas si es necesario */
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+.funcionalidad .funcionalidad-item {
+  background: var(--bs-light);
+  border-radius: 10px;
+  transition: 0.5s;
+  width: 200px !important;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido del item esté en una columna */
+  justify-content: space-between; /* Acomoda el contenido para que se distribuyan de manera uniforme */
+  height: 100%; /* Asegura que todos los items tengan la misma altura */
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.funcionalidad .funcionalidad-item:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+}
+
+.funcionalidad .funcionalidad-item .funcionalidad-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+
+.funcionalidad .funcionalidad-item .funcionalidad-img img {
+  transition: 0.5s;
+}
+
+.funcionalidad .funcionalidad-item:hover .funcionalidad-img img {
+  transform: scale(1.2);
+}
+
+.funcionalidad .h4 {
+  font-size: 1.25em !important;
+}
+
+/*** Service End ***/
