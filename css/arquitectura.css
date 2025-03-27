@@ -69,7 +69,7 @@
 }
 
 .faq .faq-container .faq-active h3 {
-  color: var(--contrast-color);
+  color: #ffffff !important;
 }
 
 .faq .faq-container .faq-active .faq-content {

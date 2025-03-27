@@ -5,147 +5,126 @@ document.addEventListener("DOMContentLoaded", function () {
       color: "item-red",
       icon: "bi-shield-check",
       link: "prevencionTecnica.html",
-      description: "Descripción del plan de prevención.",
     },
     {
       name: "PROGRAMACIÓN ANUAL DE ACTIVIDADES",
       color: "item-orange",
       icon: "bi-calendar-check",
       link: "programacionActividades.html",
-      description: "Descripción de la programación de actividades.",
     },
     {
       name: "EVALUACIONES DE RIESGO – SHEP – 38 MÉTODOS DE EVALUACIÓN",
       color: "item-indigo",
       icon: "bi-exclamation-triangle",
       link: "evaluacionRiesgos.html",
-      description: "Evaluación de riesgos SHEP.",
     },
     {
       name: "PLANIFICACIÓN DE LA ACCIÓN PREVENTIVA",
       color: "item-cyan",
       icon: "bi-clipboard-check",
       link: "planificacionAccionPreventiva.html",
-      description: "Planificación de acciones preventivas.",
     },
     {
       name: "INFORMACIÓN AL TRABAJADOR",
       color: "item-indigo",
       icon: "bi-info-circle",
       link: "informacionTrabajador.html",
-      description: "Información relevante para los trabajadores.",
     },
     {
       name: "EVALUACIONES EXTERNALIZADAS – IMPORTACIÓN DE MEDIDAS",
       color: "item-teal",
       icon: "bi-cloud-arrow-down",
       link: "evaluacionesExternalizadas.html",
-      description: "Evaluación externalizada con medidas importadas.",
     },
     {
       name: "PLANES DE EMERGENCIA Y AUTOPROTECCIÓN",
       color: "item-cyan",
       icon: "bi-fire",
       link: "planesEmergencia.html",
-      description: "Planes de emergencia y autoprotección.",
     },
     {
       name: "SIMULACROS DE EMERGENCIA",
       color: "item-red",
       icon: "bi-people",
       link: "simulacrosEmergencia.html",
-      description: "Simulacros de emergencia.",
     },
     {
       name: "REVISIÓN Y ADECUACIÓN DE MAQUINARIA Y EQUIPOS",
       color: "item-indigo",
       icon: "bi-tools",
       link: "revisionMaquinaria.html",
-      description: "Revisión de maquinaria y equipos.",
     },
     {
       name: "AUTORIZACIONES DE USO DE MAQUINARIA",
       color: "item-orange",
       icon: "bi-file-earmark-check",
       link: "autorizacionesUsoMaquinaria.html",
-      description: "Autorizaciones de uso de maquinaria.",
     },
     {
       name: "AUTORIZACIONES O PERMISOS DE TRABAJO",
       color: "item-red",
       icon: "bi-person-badge",
       link: "autorizacionesTrabajo.html",
-      description: "Autorizaciones y permisos de trabajo.",
     },
     {
       name: "TRABAJOS CUALIFICADOS VS CUALIFICACIÓN DE TRABAJADORES",
       color: "item-teal",
       icon: "bi-award",
       link: "trabajosCualificados.html",
-      description: "Trabajos cualificados y la cualificación de trabajadores.",
     },
     {
       name: "PARTES DE INSPECCIÓN CON LISTAS DE CHEQUEO DE CUALQUIER MATERIA",
       color: "item-indigo",
       icon: "bi-list-check",
       link: "partesInspeccion.html",
-      description: "Partes de inspección con listas de chequeo.",
     },
     {
       name: "GESTIÓN DE INCIDENCIAS U OBSERVACIONES",
       color: "item-cyan",
       icon: "bi-chat-left-text",
       link: "gestionIncidencias.html",
-      description: "Gestión de incidencias u observaciones.",
     },
     {
       name: "INVESTIGACIÓN DE ACCIDENTES - EXPORTACIÓN A DELTA",
       color: "item-red",
       icon: "bi-car-front",
       link: "investigacionAccidentes.html",
-      description: "Investigación de accidentes y exportación a Delta.",
     },
     {
       name: "INVESTIGACIÓN DE INCIDENTES",
       color: "item-teal",
       icon: "bi-search",
       link: "investigacionIncidentes.html",
-      description: "Investigación de incidentes.",
     },
     {
       name: "NO CONFORMIDADES",
       color: "item-teal",
       icon: "bi-x-circle",
       link: "noConformidades.html",
-      description: "Gestión de no conformidades.",
     },
     {
       name: "ENFERMEDADES PROFESIONALES",
       color: "item-orange",
       icon: "bi-heart-pulse",
       link: "enfermedadesProfesionales.html",
-      description: "Enfermedades profesionales.",
     },
     {
       name: "OTROS DAÑOS PARA LA SALUD",
       color: "item-red",
       icon: "bi-emoji-dizzy",
       link: "otrosDaniosSalud.html",
-      description: "Otros daños a la salud.",
     },
     {
       name: "GESTIÓN DE EPIS - SOLICITUDES, ENTREGAS Y DEVOLUCIONES",
       color: "item-teal",
       icon: "bi-box-seam",
       link: "gestionEPIS.html",
-      description: "Gestión de EPIs.",
     },
     {
       name: "AUDITORÍAS DE CUALQUIER MATERIA",
       color: "item-orange",
       icon: "bi-clipboard-data",
       link: "auditoriasMateria.html",
-      description: "Auditorías de cualquier materia.",
     },
   ];
 
@@ -171,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="${service.link}" class="stretched-link">
             <h3>${service.name}</h3>
           </a>
-          <p>${service.description}</p>
         </div>
       </div>
     `;

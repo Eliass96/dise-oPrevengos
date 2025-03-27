@@ -4,56 +4,56 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       nombre: "Área General",
       color: "item-cyan",
-      icono: "bi-activity",
+      icono: "bi-house-door", // Icono de casa para general
       descripcion: "Provident nihil minus qui consequatur non omnis maiores.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área Técnica",
       color: "item-red",
-      icono: "bi-broadcast",
+      icono: "bi-tools", // Icono de herramientas para técnica
       descripcion: "Expertos en soluciones adaptadas a tu empresa.",
-      enlace: "prevencionTecnica.html",
+      enlace: "areaTecnica.html",
     },
     {
       nombre: "Área Médica",
       color: "item-orange",
-      icono: "bi-easel",
+      icono: "bi-hospital", // Icono de hospital para área médica
       descripcion: "Creamos sitios web modernos y responsivos.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área CAE",
       color: "item-teal",
-      icono: "bi-bounding-box-circles",
+      icono: "bi-journal-text", // Icono de documento para CAE (coordinación de actividades empresariales)
       descripcion: "Atención rápida y eficiente para tus sistemas.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área de Formación",
       color: "item-cyan",
-      icono: "bi-activity",
+      icono: "bi-book", // Icono de libro para formación
       descripcion: "Provident nihil minus qui consequatur non omnis maiores.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área de Proyectos e Imputación de Horas",
       color: "item-red",
-      icono: "bi-broadcast",
+      icono: "bi-clock", // Icono de reloj para proyectos e imputación de horas
       descripcion: "Expertos en soluciones adaptadas a tu empresa.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área Comercial",
       color: "item-orange",
-      icono: "bi-easel",
+      icono: "bi-cart", // Icono de carrito para área comercial
       descripcion: "Creamos sitios web modernos y responsivos.",
       enlace: "prevencionTecnica.html",
     },
     {
       nombre: "Área Administrativa",
       color: "item-teal",
-      icono: "bi-bounding-box-circles",
+      icono: "bi-file-earmark", // Icono de archivo para área administrativa
       descripcion: "Atención rápida y eficiente para tus sistemas.",
       enlace: "prevencionTecnica.html",
     },
