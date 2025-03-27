@@ -1,0 +1,49 @@
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    min-height: 80px; /* Altura mínima para todas las tarjetas */
+    justify-content: center; /* Centra los elementos dentro de la tarjeta */
+  }
+  
+  .card img {
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+    max-width: 50px; /* Tamaño máximo en ancho */
+    max-height: 50px; /* Tamaño máximo en altura */
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor si es necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Mantiene la imagen circular */
+    flex-shrink: 0; /* Impide que la imagen se reduzca más de lo necesario */
+  }
+  
+  .card span {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: left;
+    margin-left: 10px;
+    flex-grow: 1; /* Hace que el texto se expanda para ocupar el espacio disponible */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Tarjetas responsivas */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      align-items: center; /* Centra los elementos en móviles */
+      min-height: 120px; /* Altura mínima ajustada para pantallas pequeñas */
+    }
+  
+    .card img {
+      max-width: 60px; /* Tamaño máximo en pantallas pequeñas */
+      max-height: 60px;
+    }
+  
+    .card span {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }

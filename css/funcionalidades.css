@@ -1,0 +1,48 @@
+.funcionalidad {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los items se acomoden en varias filas si es necesario */
+}
+
+.funcionalidad .funcionalidad-item {
+  background: var(--bs-light);
+  border-radius: 10px;
+  transition: 0.5s;
+
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido del item esté en una columna */
+  justify-content: space-between; /* Acomoda el contenido para que se distribuyan de manera uniforme */
+  height: 100%; /* Asegura que todos los items tengan la misma altura */
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.funcionalidad .funcionalidad-item:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+}
+
+.funcionalidad .funcionalidad-item .funcionalidad-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+
+.funcionalidad .funcionalidad-item .funcionalidad-img img {
+  transition: 0.5s;
+}
+
+.funcionalidad .funcionalidad-item:hover .funcionalidad-img img {
+  transform: scale(1.2);
+}
+
+.funcionalidad .h4 {
+  font-size: 1.25em !important;
+}
+
+/* <img
+src="assets/img/hero-bg-abstract.jpg"
+alt=""
+data-aos="fade-in"
+class=""
+/> */

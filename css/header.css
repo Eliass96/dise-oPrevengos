@@ -1,0 +1,312 @@
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.btn_header {
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--nav-color);
+  text-align: center;
+  text-justify: center;
+  border: 2px solid var(--nav-color);
+  margin-left: 60px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: var(--nav-font);
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.btn_header:hover {
+  background-color: var(--nav-hover-color);
+  border: 2px solid var(#fff) !important;
+}
+
+.btn_header:hover a {
+  color: #fff !important;
+}
+
+.btn_header,
+.btn_header a {
+  transition: all 0.3s ease-in-out;
+}
+/*--------------------------------------------------------------
+  # Navigation Menu - Desktop
+  --------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .shadow-nav {
+    padding: 0;
+  }
+
+  .shadow-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .shadow-nav li {
+    position: relative;
+  }
+
+  .shadow-nav .bi {
+    margin-inline-start: 5px;
+  }
+
+  .fancy-menu {
+    color: var(--nav-color);
+    margin-inline: 15px;
+    margin-block: 9px;
+    padding-block: 10px;
+    padding-inline: 0 !important;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .desplegable {
+    margin-right: 8px !important;
+  }
+
+  .dropdown-icon {
+    margin-inline: 7px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .desplegable:hover .dropdown-icon,
+  .desplegable:active .dropdown-icon {
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(
+      180deg
+    ) !important; /* Para navegadores antiguos */
+  }
+
+  .desplegable .dropdown-icon {
+    transition: transform 0.3s ease; /* Para hacer la rotación suave */
+  }
+
+  .fancy-menu:hover {
+    color: var(--nav-hover-color);
+  }
+
+  /* Animación de subrayado */
+  .fancy-menu::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--nav-hover-color);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .fancy-menu:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+  }
+
+  .dropdown-menu .shadow-nav li:hover > .fancy-menu,
+  .shadow-nav .active {
+    color: var(--nav-hover-color);
+  }
+
+  .dropdown-item {
+    padding-inline: 0 !important;
+    margin-inline: 15px !important;
+    margin-top: 5px !important;
+    width: fit-content !important;
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+  }
+
+  /* Estilos del dropdown */
+  .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 130%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: max-content; /* Hace que el ancho se ajuste al contenido más ancho */
+    min-width: 150px; /* Para que tenga un mínimo y no se vea demasiado pequeño */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+  }
+
+  .collapse {
+    width: 100vw !important;
+  }
+
+  .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .dropdown ul li {
+    width: 100%;
+  }
+
+  .dropdown ul a {
+    color: var(--nav-color);
+    margin-inline: 15px;
+    margin-top: 18px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease-in-out;
+    position: relative; /* 🔹 Necesario para el subrayado */
+  }
+
+  /* Subrayado animado SOLO del ancho del texto */
+  .dropdown ul a::after,
+  .dropdown-menu ul a::after {
+    content: "";
+    width: 100%;
+    height: 2px; /* Puedes ajustar el grosor del subrayado */
+    background: var(--nav-hover-color); /* 🔹 Color del subrayado */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0); /* 🔹 Inicialmente invisible */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Mostrar el subrayado al pasar el cursor */
+  .dropdown ul a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .dropdown ul a:hover {
+    background: var(--nav-dropdown-hover-background);
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  /* Submenús dentro de dropdown */
+  .dropdown .dropdown ul {
+    left: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Navigation Menu - Mobile
+  --------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .btn_header {
+    margin-left: 0;
+  }
+
+  .dropdown-menu {
+    box-shadow: none !important;
+  }
+}
+
+/* Sombra debajo del navbar */
+.shadow-nav {
+  position: fixed; /* Lo fija en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  z-index: 9999; /* Lo mantiene por encima de otros elementos */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); /* Sombra sutil debajo */
+  background-color: #fff; /* Fondo blanco para el header */
+  padding: 10px 0; /* Espaciado superior e inferior */
+  min-height: 13vh;
+  height: auto;
+  max-height: 13vh;
+}
+
+.header img {
+  height: 8vh !important;
+}
+
+@media screen and (max-width: 1290px) {
+  .header img {
+    height: 7vh !important;
+  }
+}
+
+.navbar-collapse {
+  background: var(--nav-dropdown-background-color);
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px;
+}
+
+@media (max-width: 991px) {
+  /* Solo afecta en pantallas pequeñas */
+  .navbar-collapse {
+    background-color: var(
+      --nav-dropdown-background-color
+    ) !important; /* Fondo sólido al desplegar */
+  }
+}
+
+.shadow-nav img {
+  height: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .shadow-nav img {
+    height: 7vh;
+  }
+}
+
+/* Estilo para el submenú */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Asegurarse de que el submenú esté oculto inicialmente */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    border: none !important;
+    padding-inline: 10px !important;
+    min-width: max-content !important; /* Hace que el ancho se ajuste al contenido más ancho */
+    max-width: max-content !important; /* Hace que el ancho se ajuste al contenido más ancho */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px;
+  }
+  
+  /* Opcional: para agregar un efecto de transición */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
