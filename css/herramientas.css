@@ -1,0 +1,98 @@
+.herramienta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.herramienta .herramienta-item {
+  background: var(--bs-light);
+  border-radius: 10px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px; /* Fija una altura constante para todos los items */
+  width: 100%;
+  max-width: 320px;
+}
+
+.herramienta .herramienta-item:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+}
+
+.herramienta .herramienta-item .herramienta-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  min-height: 7rem !important; /* Fija una altura constante para las imágenes */
+  max-height: 7rem !important; /* Fija una altura constante para las imágenes */
+  width: 100%;
+}
+
+.herramienta .herramienta-item .herramienta-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  transition: 0.5s;
+}
+
+.herramienta .herramienta-item:hover .herramienta-img img {
+  transform: scale(1.1); /* Agranda la imagen al pasar el ratón */
+}
+
+.herramienta .rounded-bottom {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.herramienta .h4 {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+  word-wrap: break-word;
+  max-height: 100px; /* Asegura que el título tenga un tamaño adecuado */
+}
+
+.herramienta .herramienta-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 70px; /* Limita la altura de la descripción */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas la descripción */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.row-cols-lg-5 .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .herramienta .herramienta-item {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.herramienta .herramienta-item p a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.herramienta .herramienta-item p a:hover {
+  text-decoration: underline;
+}
