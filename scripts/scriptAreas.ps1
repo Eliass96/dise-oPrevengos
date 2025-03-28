@@ -2,6 +2,7 @@ $rootDir = "D:/Work/Diseño/diseño"
 $sourcePath
 
 $subAreas = @(
+    # Área General
     @{
         name         = "CONFIGURACIÓN DE PERFILES Y CUENTAS DE ACCESO"
         link         = $rootDir + "/html/areas/subareas/general/configuracionPerfiles.html"
@@ -42,7 +43,113 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/general/agendaControlesPeriodicos.html"
         createAnclas = $false  # Campo booleano
     },
-    # Nuevas subáreas añadidas
+    # Área técnica
+    @{
+        name         = "PLANES DE PREVENCIÓN"
+        link         = $rootDir + "/html/areas/subareas/tecnica/prevencionTecnica.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "PROGRAMACIÓN ANUAL DE ACTIVIDADES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/programacionActividades.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "EVALUACIONES DE RIESGO – SHEP – 38 MÉTODOS DE EVALUACIÓN"
+        link         = $rootDir + "/html/areas/subareas/tecnica/evaluacionRiesgos.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "PLANIFICACIÓN DE LA ACCIÓN PREVENTIVA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/planificacionAccionPreventiva.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "INFORMACIÓN AL TRABAJADOR"
+        link         = $rootDir + "/html/areas/subareas/tecnica/informacionTrabajador.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "EVALUACIONES EXTERNALIZADAS – IMPORTACIÓN DE MEDIDAS"
+        link         = $rootDir + "/html/areas/subareas/tecnica/evaluacionesExternalizadas.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "PLANES DE EMERGENCIA Y AUTOPROTECCIÓN"
+        link         = $rootDir + "/html/areas/subareas/tecnica/planesEmergencia.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "SIMULACROS DE EMERGENCIA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/simulacrosEmergencia.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "REVISIÓN Y ADECUACIÓN DE MAQUINARIA Y EQUIPOS"
+        link         = $rootDir + "/html/areas/subareas/tecnica/revisionMaquinaria.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "AUTORIZACIONES DE USO DE MAQUINARIA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/autorizacionesUsoMaquinaria.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "AUTORIZACIONES O PERMISOS DE TRABAJO"
+        link         = $rootDir + "/html/areas/subareas/tecnica/autorizacionesTrabajo.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "TRABAJOS CUALIFICADOS VS CUALIFICACIÓN DE TRABAJADORES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/trabajosCualificados.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "PARTES DE INSPECCIÓN CON LISTAS DE CHEQUEO DE CUALQUIER MATERIA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/partesInspeccion.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "GESTIÓN DE INCIDENCIAS U OBSERVACIONES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/gestionIncidencias.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "INVESTIGACIÓN DE ACCIDENTES - EXPORTACIÓN A DELTA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/investigacionAccidentes.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "INVESTIGACIÓN DE INCIDENTES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/investigacionIncidentes.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "NO CONFORMIDADES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/noConformidades.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "ENFERMEDADES PROFESIONALES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/enfermedadesProfesionales.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "OTROS DAÑOS PARA LA SALUD"
+        link         = $rootDir + "/html/areas/subareas/tecnica/otrosDaniosSalud.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "GESTIÓN DE EPIS - SOLICITUDES, ENTREGAS Y DEVOLUCIONES"
+        link         = $rootDir + "/html/areas/subareas/tecnica/gestionEPIS.html"
+        createAnclas = $false  # Campo booleano
+    },
+    @{
+        name         = "AUDITORÍAS DE CUALQUIER MATERIA"
+        link         = $rootDir + "/html/areas/subareas/tecnica/auditoriasMateria.html"
+        createAnclas = $false  # Campo booleano
+    },    
+    # Área médica
     @{
         name         = "PROGRAMACIÓN ANUAL DE ACTIVIDADES"
         link         = $rootDir + "/html/areas/subareas/medica/programacionActividades.html"
@@ -128,6 +235,7 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/medica/estudiosAdHoc.html"
         createAnclas = $true  # Campo booleano
     },
+    # Área CAE
     @{
         name         = "CONFIGURACIÓN DE REQUISITOS DOCUMENTALES"
         link         = $rootDir + "/html/areas/subareas/cae/configuracionRequisitosDocumentales.html"
@@ -188,6 +296,7 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/cae/integracionAPIConTornosAcceso.html"
         createAnclas = $false
     },
+    # Área de Formación
     @{
         name         = "CONFIGURACIÓN DE ACCIONES FORMATIVAS EN CUALQUIER MATERIA"
         link         = $rootDir + "/html/areas/subareas/formacion/configuracionAccionesFormativas.html"
@@ -213,6 +322,7 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/formacion/importacionCertificadosFormacionExternalizada.html"
         createAnclas = $false
     },
+    # Área de Proyectos y Horas
     @{
         name         = "CONFIGURACIÓN TAREAS TIPO"
         link         = $rootDir + "/html/areas/subareas/proyectosHoras/configuracionTareasTipo.html"
@@ -253,6 +363,7 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/proyectosHoras/informesMemoriasSeguimiento.html"
         createAnclas = $false
     },
+    # Área Comercial
     @{
         name         = "GESTIÓN DE CLIENTES POTENCIALES - PRECLIENTES"
         link         = $rootDir + "/html/areas/subareas/comercial/gestionClientesPotenciales.html"
@@ -263,6 +374,7 @@ $subAreas = @(
         link         = $rootDir + "/html/areas/subareas/comercial/presupuestos.html"
         createAnclas = $false
     },
+    # Área Administrativa
     @{
         name         = "GESTIÓN DE CLIENTES EFECTIVOS"
         link         = $rootDir + "/html/areas/subareas/administrativa/gestionClientesEfectivos.html"
