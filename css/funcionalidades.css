@@ -9,7 +9,19 @@
   overflow: hidden;
 }
 
-.funcionalidad:before {
+.funcionalidadIndex {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0 0 0;
+  overflow: hidden;
+}
+
+.funcionalidad:before,
+.funcionalidadIndex:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
@@ -17,7 +29,8 @@
   z-index: 2;
 }
 
-.funcionalidad img {
+.funcionalidad img,
+.funcionalidadIndex img {
   position: absolute;
   inset: 0;
   display: block;
@@ -27,18 +40,20 @@
   z-index: 1;
 }
 
-.funcionalidad .container {
+.funcionalidad .container,
+.funcionalidadIndex .container {
   position: relative;
   z-index: 3;
 }
 
-.funcionalidad .icon-box {
+.funcionalidad .icon-box,
+.funcionalidadIndex .icon-box {
   background-color: var(--surface-color);
   padding: 50px 30px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out !important;
   border-radius: 8px;
   z-index: 1;
   height: 100%;
@@ -53,6 +68,7 @@
 
 .icon-box .title a {
   color: #2c3e50 !important;
+  transition: all 0.25s ease-in-out !important;
 }
 
 .icon-box .description {
@@ -67,16 +83,17 @@
   display: inline-block;
   font-size: 36px;
   line-height: 1;
-  color: #2c3e50;
+  color: #0d8eca;
+  transition: all 0.25s ease-in-out !important;
 }
 
 @media (min-width: 640px) {
   .icon-box:hover {
-    transform: scale(1.08) !important;
+    transform: scale(1.05) !important;
   }
 
   .icon-box:hover .title a,
   .icon-box:hover .icon {
-    color: #326699 !important;
+    color: #0d8eca !important;
   }
 }

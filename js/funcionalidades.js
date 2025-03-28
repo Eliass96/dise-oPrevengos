@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "MECANISMOS DE AUTENTICACIÓN",
             icon: "bi-shield-lock",
             description: "Sistemas avanzados de verificación de identidad que garantizan un acceso seguro y protegen la información confidencial.",
-            link: "herramientas.html"
+            link: "mecanismosAutenticacion.html"
         },
         {
             title: "ROLES DE ACCESO AL SISTEMA",
             icon: "bi-person-badge",
             description: "Asignación de permisos y niveles de acceso para garantizar la seguridad y control en el uso de los sistemas.",
-            link: "herramientas.html"
+            link: "roles.html"
         }
     ];
 

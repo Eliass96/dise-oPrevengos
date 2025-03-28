@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     item.innerHTML = `
-      <div class="funcionalidad-item">
-        <div class="funcionalidad-img">
+      <div class="herramienta-item">
+        <div class="herramienta-img">
           <img src="${functionality.image}" class="img-fluid rounded-top w-100" alt="Image" />
         </div>
         <div class="rounded-bottom p-4">
