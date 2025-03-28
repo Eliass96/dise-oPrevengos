@@ -1,4 +1,4 @@
-$rootDir = "D:/Work/Diseño/diseño"
+$rootDir = "D:/Work/Design/prevengos"
 $sourcePath
 
 $mecanismos = @(
@@ -34,37 +34,43 @@ $mecanismos = @(
 
 foreach ($mecanismo in $mecanismos) {
     $destinationPath = $mecanismo.link
-    $name = $mecanismo.name
-    $title = "Prevengos - " + $name.Substring(0, 1).ToUpper() + $name.Substring(1).ToLower()
 
-    # Si createAnclas es true, agregar el apartado de las anclas al lateral
-    if ($mecanismo.createAnclas -eq $true) {
-        $sourcePath = "D:/Work/Diseño/diseño/html/templates/template.html"
+    if (-not (Test-Path $destinationPath)) {
+        $name = $mecanismo.name
+        $title = "Prevengos - " + $name.Substring(0, 1).ToUpper() + $name.Substring(1).ToLower()
+
+        # Si createAnclas es true, agregar el apartado de las anclas al lateral
+        if ($mecanismo.createAnclas -eq $true) {
+            $sourcePath = $rootDir + "/html/templates/template.html"
+        }
+        else {
+            $sourcePath = $rootDir + "/html/templates/templateWithSidebarHidden.html"
+        }
+
+        # Copiar el archivo original
+        Copy-Item $sourcePath $destinationPath -Force
+
+        # Esperar un momento para asegurar que el archivo esté disponible
+        Start-Sleep -Milliseconds 500
+
+        # Leer el contenido del archivo copiado
+        $htmlContent = Get-Content -Path $destinationPath -Raw
+
+        # Reemplazar el título en la etiqueta <title>
+        $htmlContent = $htmlContent -replace '<title>.*?</title>', "<title>$title</title>"
+
+        # Reemplazar el texto dentro del <h1> en la sección Page Title
+        $htmlContent = $htmlContent -replace '(<h1[^>]*?>)\s*[^<]+(\s*</h1>)', "`$1$name`$2"
+
+        # Reemplazar la imagen estática con la imagen del mecanismo
+        $htmlContent = $htmlContent -replace '<img src="/assets/img/services.jpg"[^>]*>', "<img src='$($mecanismo.image)' alt='' class='img-fluid services-img' />"
+
+        # Guardar el archivo modificado
+        $htmlContent | Set-Content -Path $destinationPath -Encoding UTF8 -Force
+
+        Write-Host "Archivo creado y modificado en: $destinationPath"
     }
     else {
-        $sourcePath = "D:/Work/Diseño/diseño/html/templates/templateWithSidebarHidden.html"
+        Write-Host "El archivo ya existe: $destinationPath"
     }
-
-    # Copiar el archivo original
-    Copy-Item $sourcePath $destinationPath -Force
-
-    # Esperar un momento para asegurar que el archivo esté disponible
-    Start-Sleep -Milliseconds 500
-
-    # Leer el contenido del archivo copiado
-    $htmlContent = Get-Content -Path $destinationPath -Raw
-
-    # Reemplazar el título en la etiqueta <title>
-    $htmlContent = $htmlContent -replace '<title>.*?</title>', "<title>$title</title>"
-
-    # Reemplazar el texto dentro del <h1> en la sección Page Title
-    $htmlContent = $htmlContent -replace '(<h1[^>]*?>)\s*[^<]+(\s*</h1>)', "`$1$name`$2"
-
-    # Reemplazar la imagen estática con la imagen del mecanismo
-    $htmlContent = $htmlContent -replace '<img src="/assets/img/services.jpg"[^>]*>', "<img src='$($mecanismo.image)' alt='' class='img-fluid services-img' />"
-
-    # Guardar el archivo modificado
-    $htmlContent | Set-Content -Path $destinationPath -Encoding UTF8 -Force
-
-    Write-Host "Archivo creado y modificado en: $destinationPath"
 }
