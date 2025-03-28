@@ -1,60 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const subAreas = [
-        {
-          name: "CONFIGURACIÓN TAREAS TIPO",
-          color: "item-indigo",
-          icon: "bi-list-check",
-          link: "configuracionTareasTipo.html",
-        },
-        {
-          name: "CONFIGURACIÓN DE PROYECTOS TIPO VS TAREAS",
-          color: "item-orange",
-          icon: "bi-projector",
-          link: "configuracionProyectosVsTareas.html",
-        },
-        {
-          name: "CONFIGURACIÓN DE COSTES DE LOS TÉCNICOS",
-          color: "item-teal",
-          icon: "bi-wallet",
-          link: "configuracionCostesTecnicos.html",
-        },
-        {
-          name: "GESTIÓN DE PROYECTOS VS TAREAS, HORAS, PLAZOS Y TÉCNICOS",
-          color: "item-orange",
-          icon: "bi-gear",
-          link: "gestionProyectosVsTareas.html",
-        },
-        {
-          name: "IMPUTACIÓN DE HORAS DEDICADAS",
-          color: "item-teal",
-          icon: "bi-clock",
-          link: "imputacionHoras.html",
-        },
-        {
-          name: "IMPUTACIÓN DE KILOMETRAJES, DIETAS Y GASTOS",
-          color: "item-red",
-          icon: "bi-wallet2",
-          link: "imputacionKilometrajesDietasGastos.html",
-        },
-        {
-          name: "CONTROL DE COSTES Y DESVIACIONES",
-          color: "item-cyan",
-          icon: "bi-graph-up-arrow",
-          link: "controlCostesDesviaciones.html",
-        },
-        {
-          name: "INFORMES Y MEMORIAS DE SEGUIMIENTO",
-          color: "item-pink",
-          icon: "bi-file-earmark-text",
-          link: "informesMemoriasSeguimiento.html",
-        },
-      ];
-      
-  
-    const servicesContainer = document.getElementById("services-container");
-  
-    subAreas.forEach((service) => {
-      const serviceHTML = `
+  const subAreas = [
+    {
+      name: "CONFIGURACIÓN TAREAS TIPO",
+      color: "item-indigo",
+      icon: "bi-list-check",
+      link: "/html/areas/subareas/proyectosHoras/configuracionTareasTipo.html",
+    },
+    {
+      name: "CONFIGURACIÓN DE PROYECTOS TIPO VS TAREAS",
+      color: "item-orange",
+      icon: "bi-projector",
+      link: "/html/areas/subareas/proyectosHoras/configuracionProyectosVsTareas.html",
+    },
+    {
+      name: "CONFIGURACIÓN DE COSTES DE LOS TÉCNICOS",
+      color: "item-teal",
+      icon: "bi-wallet",
+      link: "/html/areas/subareas/proyectosHoras/configuracionCostesTecnicos.html",
+    },
+    {
+      name: "GESTIÓN DE PROYECTOS VS TAREAS, HORAS, PLAZOS Y TÉCNICOS",
+      color: "item-orange",
+      icon: "bi-gear",
+      link: "/html/areas/subareas/proyectosHoras/gestionProyectosVsTareas.html",
+    },
+    {
+      name: "IMPUTACIÓN DE HORAS DEDICADAS",
+      color: "item-teal",
+      icon: "bi-clock",
+      link: "/html/areas/subareas/proyectosHoras/imputacionHoras.html",
+    },
+    {
+      name: "IMPUTACIÓN DE KILOMETRAJES, DIETAS Y GASTOS",
+      color: "item-red",
+      icon: "bi-wallet2",
+      link: "/html/areas/subareas/proyectosHoras/imputacionKilometrajesDietasGastos.html",
+    },
+    {
+      name: "CONTROL DE COSTES Y DESVIACIONES",
+      color: "item-cyan",
+      icon: "bi-graph-up-arrow",
+      link: "/html/areas/subareas/proyectosHoras/controlCostesDesviaciones.html",
+    },
+    {
+      name: "INFORMES Y MEMORIAS DE SEGUIMIENTO",
+      color: "item-pink",
+      icon: "bi-file-earmark-text",
+      link: "/html/areas/subareas/proyectosHoras/informesMemoriasSeguimiento.html",
+    },
+  ];
+
+  const servicesContainer = document.getElementById("services-container");
+
+  subAreas.forEach((service) => {
+    const serviceHTML = `
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="subarea-item ${service.color} position-relative">
             <div class="icon">
@@ -76,9 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
-  
-      // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
-      servicesContainer.innerHTML += serviceHTML;
-    });
+
+    // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
+    servicesContainer.innerHTML += serviceHTML;
   });
-  
+});

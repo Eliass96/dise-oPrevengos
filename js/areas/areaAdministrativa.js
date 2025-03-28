@@ -1,66 +1,65 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const subAreas = [
-        {
-          name: "GESTIÓN DE CLIENTES EFECTIVOS",
-          color: "item-indigo",
-          icon: "bi-person-check",
-          link: "gestionClientesEfectivos.html",
-        },
-        {
-          name: "PRESUPUESTOS",
-          color: "item-teal",
-          icon: "bi-cash-coin",
-          link: "presupuestos.html",
-        },
-        {
-          name: "CONTRATOS – EXPORTACIÓN A SERPA - CERTIFICADOS DE CONTRATACIÓN",
-          color: "item-red",
-          icon: "bi-file-earmark",
-          link: "contratosExportacionSerpa.html",
-        },
-        {
-          name: "FACTURACIÓN - CONEXIÓN CON VERIFACTU",
-          color: "item-orange",
-          icon: "bi-file-earmark-spreadsheet",
-          link: "facturacionVerifactu.html",
-        },
-        {
-          name: "COBROS - ÓRDENES DE DOMICILIACIÓN - REMESAS BANCARIAS SEPA / ABA",
-          color: "item-cyan",
-          icon: "bi-credit-card",
-          link: "cobrosRemesasBancarias.html",
-        },
-        {
-          name: "MAILING A CLIENTES DE MOROSIDAD Y DEL MODELO 347",
-          color: "item-pink",
-          icon: "bi-envelope-open",
-          link: "mailingClientesMorosidad.html",
-        },
-        {
-          name: "COMISIONES A TERCEROS",
-          color: "item-teal",
-          icon: "bi-person-dash",
-          link: "comisionesATerceros.html",
-        },
-        {
-          name: "PREVISIÓN DE FACTURACIÓN Y EVOLUCIÓN DE CARTERA",
-          color: "item-orange",
-          icon: "bi-bar-chart-line",
-          link: "previsionFacturacion.html",
-        },
-        {
-          name: "ENLACES CON SISTEMAS DE CONTABILIDAD",
-          color: "item-indigo",
-          icon: "bi-building-lock",
-          link: "enlacesContabilidad.html",
-        },
-      ];
-      
-  
-    const servicesContainer = document.getElementById("services-container");
-  
-    subAreas.forEach((service) => {
-      const serviceHTML = `
+  const subAreas = [
+    {
+      name: "GESTIÓN DE CLIENTES EFECTIVOS",
+      color: "item-indigo",
+      icon: "bi-person-check",
+      link: "/html/areas/subareas/administrativa/gestionClientesEfectivos.html",
+    },
+    {
+      name: "PRESUPUESTOS",
+      color: "item-teal",
+      icon: "bi-cash-coin",
+      link: "/html/areas/subareas/administrativa/presupuestos.html",
+    },
+    {
+      name: "CONTRATOS – EXPORTACIÓN A SERPA - CERTIFICADOS DE CONTRATACIÓN",
+      color: "item-red",
+      icon: "bi-file-earmark",
+      link: "/html/areas/subareas/administrativa/contratosExportacionSerpa.html",
+    },
+    {
+      name: "FACTURACIÓN - CONEXIÓN CON VERIFACTU",
+      color: "item-orange",
+      icon: "bi-file-earmark-spreadsheet",
+      link: "/html/areas/subareas/administrativa/facturacionVerifactu.html",
+    },
+    {
+      name: "COBROS - ÓRDENES DE DOMICILIACIÓN - REMESAS BANCARIAS SEPA / ABA",
+      color: "item-cyan",
+      icon: "bi-credit-card",
+      link: "/html/areas/subareas/administrativa/cobrosRemesasBancarias.html",
+    },
+    {
+      name: "MAILING A CLIENTES DE MOROSIDAD Y DEL MODELO 347",
+      color: "item-pink",
+      icon: "bi-envelope-open",
+      link: "/html/areas/subareas/administrativa/mailingClientesMorosidad.html",
+    },
+    {
+      name: "COMISIONES A TERCEROS",
+      color: "item-teal",
+      icon: "bi-person-dash",
+      link: "/html/areas/subareas/administrativa/comisionesATerceros.html",
+    },
+    {
+      name: "PREVISIÓN DE FACTURACIÓN Y EVOLUCIÓN DE CARTERA",
+      color: "item-orange",
+      icon: "bi-bar-chart-line",
+      link: "/html/areas/subareas/administrativa/previsionFacturacion.html",
+    },
+    {
+      name: "ENLACES CON SISTEMAS DE CONTABILIDAD",
+      color: "item-indigo",
+      icon: "bi-building-lock",
+      link: "/html/areas/subareas/administrativa/enlacesContabilidad.html",
+    },
+  ];
+
+  const servicesContainer = document.getElementById("services-container");
+
+  subAreas.forEach((service) => {
+    const serviceHTML = `
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="subarea-item ${service.color} position-relative">
             <div class="icon">
@@ -82,9 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
-  
-      // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
-      servicesContainer.innerHTML += serviceHTML;
-    });
+
+    // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
+    servicesContainer.innerHTML += serviceHTML;
   });
-  
+});

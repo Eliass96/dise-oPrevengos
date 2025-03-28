@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const subAreas = [
-        {
-          name: "GESTIÓN DE CLIENTES POTENCIALES - PRECLIENTES",
-          color: "item-indigo",
-          icon: "bi-person-lines-fill",
-          link: "gestionClientesPotenciales.html",
-        },
-        {
-          name: "PRESUPUESTOS",
-          color: "item-teal",
-          icon: "bi-cash-coin",
-          link: "presupuestos.html",
-        },
-      ];
-      
-  
-    const servicesContainer = document.getElementById("services-container");
-  
-    subAreas.forEach((service) => {
-      const serviceHTML = `
+  const subAreas = [
+    {
+      name: "GESTIÓN DE CLIENTES POTENCIALES - PRECLIENTES",
+      color: "item-indigo",
+      icon: "bi-person-lines-fill",
+      link: "/html/areas/subareas/comercial/gestionClientesPotenciales.html",
+    },
+    {
+      name: "PRESUPUESTOS",
+      color: "item-teal",
+      icon: "bi-cash-coin",
+      link: "/html/areas/subareas/comercial/presupuestos.html",
+    },
+  ];
+
+  const servicesContainer = document.getElementById("services-container");
+
+  subAreas.forEach((service) => {
+    const serviceHTML = `
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="subarea-item ${service.color} position-relative">
             <div class="icon">
@@ -40,9 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
-  
-      // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
-      servicesContainer.innerHTML += serviceHTML;
-    });
+
+    // Asumiendo que tienes un contenedor con el id 'services-container' para insertar las tarjetas
+    servicesContainer.innerHTML += serviceHTML;
   });
-  
+});

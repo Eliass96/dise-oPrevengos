@@ -4,31 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "CONFIGURACIÓN DE ACCIONES FORMATIVAS EN CUALQUIER MATERIA",
       color: "item-indigo",
       icon: "bi-gear",
-      link: "configuracionAccionesFormativas.html",
+      link: "/html/areas/subareas/formacion/configuracionAccionesFormativas.html",
     },
     {
       name: "FORMACIÓN PRESENCIAL",
       color: "item-teal",
       icon: "bi-person-bounding-box",
-      link: "formacionPresencial.html",
+      link: "/html/areas/subareas/formacion/formacionPresencial.html",
     },
     {
       name: "FORMACIÓN ONLINE  - ACCESO WEB / WEB APP DEL TRABAJADOR",
       color: "item-orange",
       icon: "bi-laptop",
-      link: "formacionOnlineAccesoWebApp.html",
+      link: "/html/areas/subareas/formacion/formacionOnlineAccesoWebApp.html",
     },
     {
       name: "FORMACIÓN ONLINE  - INTEGRACIÓN BIDIRECCIONAL CON MOODLE",
       color: "item-red",
       icon: "bi-cloud-arrow-down",
-      link: "formacionOnlineMoodleIntegracion.html",
+      link: "/html/areas/subareas/formacion/formacionOnlineMoodleIntegracion.html",
     },
     {
       name: "IMPORTACIÓN DE CERTIFICADOS DE FORMACIÓN EXTERNALIZADA",
       color: "item-pink",
       icon: "bi-file-earmark-check",
-      link: "importacionCertificadosFormacionExternalizada.html",
+      link: "/html/areas/subareas/formacion/importacionCertificadosFormacionExternalizada.html",
     },
   ];
 
