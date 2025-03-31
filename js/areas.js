@@ -45,14 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       nombre: "Área Comercial",
-      color: "item-cyan",
+      color: "item-green",
       icono: "bi-cart", // Icono de carrito para área comercial
       descripcion: "Creamos sitios web modernos y responsivos.",
       enlace: "/html/areas/areaComercial.html",
     },
     {
       nombre: "Área Administrativa",
-      color: "item-red",
+      color: "item-yellow",
       icono: "bi-file-earmark", // Icono de archivo para área administrativa
       descripcion: "Atención rápida y eficiente para tus sistemas.",
       enlace: "/html/areas/areaAdministrativa.html",

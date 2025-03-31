@@ -38,15 +38,10 @@
   }
   
   .services .subarea-item h3 {
-    font-weight: 700;
+    font-weight: 600;
     margin: 10px 0 15px 0;
-    font-size: 22px;
-  }
-  
-  .services .subarea-item p {
-    line-height: 24px;
-    font-size: 14px;
-    margin-bottom: 0;
+    font-size: 1.25em;
+    color: black !important;
   }
   
   .services .subarea-item:hover {
@@ -124,3 +119,42 @@
   .services .subarea-item.item-pink:hover .icon path {
     fill: #f3268c;
   }
+
+  /* Green */
+.services .subarea-item.item-green i {
+  color: #28a745;
+}
+
+.services .subarea-item.item-green:hover .icon i {
+  color: #fff;
+}
+
+.services .subarea-item.item-green:hover .icon path {
+  fill: #28a745;
+}
+
+/* Purple */
+.services .subarea-item.item-purple i {
+  color: #6f42c1;
+}
+
+.services .subarea-item.item-purple:hover .icon i {
+  color: #fff;
+}
+
+.services .subarea-item.item-purple:hover .icon path {
+  fill: #6f42c1;
+}
+
+/* Yellow */
+.services .subarea-item.item-yellow i {
+  color: #ffc107;
+}
+
+.services .subarea-item.item-yellow:hover .icon i {
+  color: #fff;
+}
+
+.services .subarea-item.item-yellow:hover .icon path {
+  fill: #ffc107;
+}

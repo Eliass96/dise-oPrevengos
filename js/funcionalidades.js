@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         iconBox.classList.add("col-lg-4");
 
         iconBox.innerHTML = `
-            <div class="icon-box" data-aos="zoom-out" data-aos-delay="${(index + 1) * 100}">
+            <div class="icon-box text-center" data-aos="zoom-out" data-aos-delay="${(index + 1) * 100}">
                 <div class="icon"><i class="bi ${item.icon}"></i></div>
                 <h4 class="title"><a href="${item.link}">${item.title}</a></h4>
                 <p class="description">${item.description}</p>

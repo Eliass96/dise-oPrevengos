@@ -50,7 +50,7 @@
 .funcionalidad .icon-box,
 .funcionalidadIndex .icon-box {
   background-color: var(--surface-color);
-  padding: 50px 30px;
+  padding: 25px 20px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
