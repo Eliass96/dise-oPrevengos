@@ -61,26 +61,24 @@
   --contrast-color: #ffffff;
 }
 
-/* Botón elegante */
 .btn-custom {
-  display: inline-block;
-  background: var(--nav-color); /* Color del botón */
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid white !important;
+  color: white; /* Color de fondo ligeramente transparente */
+  border: none;
+  border-radius: 6px;
   transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para resaltar */
+  font-weight: bold;
 }
 
-/* Efecto hover */
 .btn-custom:hover {
-  background: #254d73; /* Color más oscuro al pasar el ratón */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
-  transform: translateY(-2px); /* Pequeño levantamiento */
-  color: white;
+  background-color: white !important; /* Color más oscuro al pasar el ratón */
+  color: black !important;
+  border: 1px solid black !important;
 }
 
 .margen-top {
