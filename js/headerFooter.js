@@ -17,5 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   loadComponent("nav-placeholder", "/html/header.html");
+  loadComponent("navDark-placeholder", "/html/headerDark.html");
   loadComponent("footer-placeholder", "/html/footer.html");
 });
