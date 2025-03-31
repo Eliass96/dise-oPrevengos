@@ -1,0 +1,86 @@
+.arquitectura .arquitectura-item {
+    border-radius: 10px;
+    background: var(--bs-white);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 20vh;
+}
+
+.arquitectura .arquitectura-item p a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+.arquitectura .btn-custon {
+    max-width: fit-content !important;
+}
+
+.arquitectura .arquitectura-item:hover {
+    background: var(--accent-color);
+}
+
+.arquitectura .arquitectura-item .arquitectura-icon {
+    position: relative;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.arquitectura .arquitectura-item:hover .arquitectura-icon i {
+    z-index: 9;
+}
+
+.arquitectura .arquitectura-item .arquitectura-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-dark);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.arquitectura .arquitectura-item:hover .arquitectura-icon::after {
+    height: 100%;
+}
+
+.arquitectura .arquitectura-item .arquitectura-icon {
+    color: var(--accent-color);
+}
+
+.arquitectura .arquitectura-item .arquitectura-icon,
+.arquitectura .arquitectura-item h4,
+.arquitectura .arquitectura-item p {
+    transition: 0.5s;
+}
+
+.arquitectura .arquitectura-item:hover .arquitectura-icon {
+    color: var(--bs-white);
+}
+.arquitectura .arquitectura-item:hover a,
+.arquitectura .arquitectura-item:hover p,
+.arquitectura .arquitectura-item:hover p a {
+    color: var(--bs-white);
+}
+
+.arquitectura .arquitectura-item:hover a.btn {
+    background: var(--bs-white);
+    color: var(--accent-color);
+}
+
+.arquitectura .arquitectura-item:hover a.btn:hover {
+    background: var(--bs-dark);
+    color: var(--bs-white);
+}

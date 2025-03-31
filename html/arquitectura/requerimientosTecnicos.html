@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prevengos - Requerimientos técnicos</title>
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="/assets/img/icon/icono-36.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/img/icon/icono-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/img/ficon/icono-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/img/icon/icono-144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="/assets/img/icon/icono-192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="384x384"
+      href="/assets/img/icon/icono-384.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/arquitectura.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main class="main">
+      <!-- Arquitectura Start -->
+      <div class="container-fluid arquitectura bg-light pt-2 pb-5">
+        <!-- Page Title -->
+        <div class="fancy-header container-fluid margen-top">
+          <h1
+            class="row fancy-title mb-4 text-center d-flex justify-content-center"
+          >
+            REQUERIMIENTOS TÉCNICOS
+          </h1>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Table Start -->
+        <div class="container py-2">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover text-center align-middle">
+              <thead class="bg-dark text-light text-uppercase font-weight-bold">
+                <tr>
+                  <th>Requisito</th>
+                  <th>Aplicativo Central</th>
+                  <th>Servidor TR</th>
+                  <th>Área Web</th>
+                  <th>Módulos Auxiliares Off-line</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Procesador</td>
+                  <td>2,5 GHz, doble núcleo</td>
+                  <td>2,5 GHz, doble núcleo o superior</td>
+                  <td>2,5 GHz, doble núcleo</td>
+                  <td>2 GHz, doble núcleo</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Memoria RAM</td>
+                  <td>4 GB</td>
+                  <td>6 GB</td>
+                  <td>4 GB</td>
+                  <td>4 GB</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Disco Duro</td>
+                  <td>100 GB</td>
+                  <td>Requiere aumentar según número de usuarios</td>
+                  <td>100 GB</td>
+                  <td>No aplica</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Sistema Operativo</td>
+                  <td>MS Windows Server 2016 o superior</td>
+                  <td>MS Windows Server 2016 o superior</td>
+                  <td>MS Windows Server 2016 o superior</td>
+                  <td>MS Windows 10 o superior</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">.NET Framework</td>
+                  <td>3.5 con SP1 y 4.0</td>
+                  <td>3.5 con SP1 y 4.0</td>
+                  <td>4.5</td>
+                  <td>3.5 con SP1 y 4.0</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">SQL Server</td>
+                  <td>
+                    MS SQL Server 2014 o posterior (versión Express válida)
+                  </td>
+                  <td>
+                    Requiere aumento de capacidad según usuarios concurrentes
+                  </td>
+                  <td>MS SQL Server 2014 o posterior</td>
+                  <td>MS SQL Server Express 2014 o posterior</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Permisos</td>
+                  <td>
+                    Carpeta de ficheros compartida con permisos de
+                    lectura/escritura
+                  </td>
+                  <td>Permisos adecuados para conexión remota</td>
+                  <td>Carpeta con permisos de lectura/escritura para IIS</td>
+                  <td>
+                    Permisos para instalar cliente en C:\Archivos de
+                    programa\Prevengos
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Conexión USB</td>
+                  <td>Puerto USB para mochila o llave hardware</td>
+                  <td>Puerto USB para mochila o llave hardware</td>
+                  <td>No aplica</td>
+                  <td>Puerto USB para mochila o llave hardware</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Red</td>
+                  <td>Estaciones de trabajo en red local cliente/servidor</td>
+                  <td>
+                    Estaciones de trabajo con conexión remota (VPN/Internet)
+                  </td>
+                  <td>
+                    Requiere conexión TCP/IP segura entre servidores SQL y Web
+                  </td>
+                  <td>No aplica</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Software Requerido</td>
+                  <td>MS Office 2010 o superior, para usuarios del cliente</td>
+                  <td>MS Office 2010 o superior</td>
+                  <td>
+                    Internet Information Server (IIS), FTP y SSL/HTTPS
+                    habilitados
+                  </td>
+                  <td>MS Office 2010 o superior</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">IP Pública</td>
+                  <td>No aplica</td>
+                  <td>Se recomienda IP pública fija habilitada</td>
+                  <td>Se recomienda IP pública fija habilitada</td>
+                  <td>No aplica</td>
+                </tr>
+                <tr>
+                  <td class="bg-dark text-light text-uppercase font-weight-bold">Ancho de Banda</td>
+                  <td>Requiere aumento según usuarios concurrentes</td>
+                  <td>Requiere aumento según usuarios concurrentes</td>
+                  <td>Conectividad a Internet con ancho de banda adecuado</td>
+                  <td>No aplica</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Table End -->
+      </div>
+      <!-- Arquitectura End -->
+    </main>
+    <div id="footer-placeholder"></div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <script src="/js/headerFooter.js"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="/js/main.js"></script>
+    <script src="/js/arquitectura.js"></script>
+  </body>
+</html>
