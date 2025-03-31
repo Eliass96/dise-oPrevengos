@@ -255,3 +255,8 @@ section,
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
   background: #fff; /* Fondo blanco */
 }
+
+/* CLIENTES */ 
+.img-small {
+  opacity: 50% !important;
+}

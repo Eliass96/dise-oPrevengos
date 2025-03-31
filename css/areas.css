@@ -1,18 +1,20 @@
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
 .title_service {
   color: var(--heading-color);
 }
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
 .services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  /* background-color: var(--surface-color); */
+  background-color: rgba(255, 255, 255, 0);
+  /* box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1); */
   height: 100%;
-  padding: 60px 30px;
+  padding: 15px 15px;
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
+  max-width: 20vw;
 }
 
 .services .service-item .icon {
@@ -56,7 +58,7 @@
 }
 
 .services .service-item:hover {
-  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
 }
 
 .services .service-item.item-cyan i {

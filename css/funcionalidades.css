@@ -11,7 +11,8 @@
 
 .funcionalidadIndex {
   width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: fit-content;
+  max-height: fit-content;
   position: relative;
   display: flex;
   align-items: center;
