@@ -31,28 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       nombre: "Área de Formación",
-      color: "item-cyan",
+      color: "item-pink",
       icono: "bi-book", // Icono de libro para formación
       descripcion: "Provident nihil minus qui consequatur non omnis maiores.",
       enlace: "/html/areas/areaFormacion.html",
     },
     {
       nombre: "Área de Proyectos e Imputación de Horas",
-      color: "item-red",
+      color: "item-indigo",
       icono: "bi-clock", // Icono de reloj para proyectos e imputación de horas
       descripcion: "Expertos en soluciones adaptadas a tu empresa.",
       enlace: "/html/areas/areaProyectosHoras.html",
     },
     {
       nombre: "Área Comercial",
-      color: "item-orange",
+      color: "item-cyan",
       icono: "bi-cart", // Icono de carrito para área comercial
       descripcion: "Creamos sitios web modernos y responsivos.",
       enlace: "/html/areas/areaComercial.html",
     },
     {
       nombre: "Área Administrativa",
-      color: "item-teal",
+      color: "item-red",
       icono: "bi-file-earmark", // Icono de archivo para área administrativa
       descripcion: "Atención rápida y eficiente para tus sistemas.",
       enlace: "/html/areas/areaAdministrativa.html",
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Generar dinámicamente el HTML
   areas.forEach((service) => {
     const serviceHTML = `
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-item ${service.color} position-relative">
                     <div class="icon">
                         <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
